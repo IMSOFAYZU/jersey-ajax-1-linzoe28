@@ -19,6 +19,8 @@ public class HelloResource {
     @GET
     @Produces("text/plain")
     public String sayHello(@PathParam("username") String name){
-        return "Hello, "+name;
+        //return "Hello, "+name
+        return null;
+        ////////////////////////
     }
 }
