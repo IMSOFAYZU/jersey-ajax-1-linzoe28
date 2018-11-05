@@ -29,8 +29,9 @@ public class UserResource {
     //1. produces MediaType.APPLICATION_JSON
     //2. PathParam("id")
     //3. return db.get(id)
-    
-    public User getUser(String id){
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public User getUser(@PathParam("id") String id){
         return db.get(id);
     }
 }

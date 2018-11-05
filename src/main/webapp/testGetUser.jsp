@@ -20,7 +20,13 @@
                 1. ajax get user data
                 2. fill data to id and password
                 */
-                
+                let userId=$("#userId").val();
+                $.ajax("webapi/user/"+userId,{
+                   success:function(data){
+                       $("#id").text(data.id);
+                       $("#password").text(data.password);
+                   } 
+                });
             }
         </script>
     </head>
@@ -30,6 +36,6 @@
         <!--
         add id and password span field
         -->
-        
+        id:<span id="id"></span> password:<span id="password"></span>
     </body>
 </html>
